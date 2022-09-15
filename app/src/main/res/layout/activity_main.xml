@@ -25,22 +25,107 @@
         style="@style/button_text"
         app:layout_constraintStart_toEndOf="@id/one_button"
         app:layout_constraintTop_toBottomOf="@id/result_text"
-        android:text="2"/>
+        android:text="@string/_2"/>
 
     <Button
         android:id= "@+id/three_button"
         style="@style/button_text"
         app:layout_constraintStart_toEndOf="@id/two_button"
         app:layout_constraintTop_toBottomOf="@id/result_text"
-        android:text="3"/>
+        android:text="@string/_3"/>
 
     <Button
         style="@style/button_text"
         android:id="@+id/multiplication_button"
         app:layout_constraintTop_toBottomOf="@id/result_text"
         app:layout_constraintStart_toEndOf="@id/three_button"
-        android:text="x"/>
+        android:text="@string/x"/>
 
+    <Button
+        style="@style/button_text"
+        android:id="@+id/four_button"
+        app:layout_constraintTop_toBottomOf="@id/one_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/_4"/>
+
+    <Button
+        style="@style/button_text"
+        android:id="@+id/five_button"
+        app:layout_constraintTop_toBottomOf="@id/two_button"
+        app:layout_constraintStart_toEndOf="@id/four_button"
+        android:text="@string/_5"/>
+
+    <Button
+        style="@style/button_text"
+        android:id="@+id/six_button"
+        app:layout_constraintTop_toBottomOf="@id/one_button"
+        app:layout_constraintStart_toEndOf="@id/five_button"
+        android:text="@string/_6"/>
+
+    <Button
+        style="@style/button_text"
+        android:id="@+id/minus_button"
+        app:layout_constraintTop_toBottomOf="@id/one_button"
+        app:layout_constraintStart_toEndOf="@id/six_button"
+        android:text="@string/minus"/>
+
+    <Button
+        style="@style/button_text"
+        android:id="@+id/seven_button"
+        app:layout_constraintTop_toBottomOf="@id/four_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/_7"/>
+
+    <Button
+        style="@style/button_text"
+        android:id="@+id/eight_button"
+        app:layout_constraintTop_toBottomOf="@id/four_button"
+        app:layout_constraintStart_toEndOf="@id/seven_button"
+        android:text="@string/_8"/>
+
+    <Button
+        style="@style/button_text"
+        android:id="@+id/nine_button"
+        app:layout_constraintTop_toBottomOf="@id/four_button"
+        app:layout_constraintStart_toEndOf="@id/eight_button"
+        android:text="@string/_9"/>
+
+    <Button
+        style="@style/button_text"
+        android:id="@+id/plus_button"
+        app:layout_constraintTop_toBottomOf="@id/four_button"
+        app:layout_constraintStart_toEndOf="@id/nine_button"
+        android:text="@string/plus"/>
+
+    <Button
+        style="@style/button_text"
+        android:id="@+id/zero_button"
+        app:layout_constraintTop_toBottomOf="@id/seven_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/_0"/>
+    <Button
+        style="@style/button_text"
+        android:id="@+id/divide_button"
+        app:layout_constraintTop_toBottomOf="@id/seven_button"
+        app:layout_constraintStart_toEndOf="@id/zero_button"
+        android:text="@string/divide"/>
+
+    <Button
+        style="@style/button_text"
+        android:id="@+id/equals_button"
+        app:layout_constraintTop_toBottomOf="@id/seven_button"
+        app:layout_constraintStart_toEndOf="@id/divide_button"
+        android:text="@string/equal"/>
+
+    <ImageButton
+        android:id="@+id/delete_button"
+        style="@style/button_text"
+        android:layout_width="95sp"
+        android:layout_height="95sp"
+        android:src="@android:drawable/ic_input_delete"
+        app:layout_constraintStart_toEndOf="@id/equals_button"
+        app:layout_constraintTop_toBottomOf="@id/seven_button"
+        android:contentDescription="@string/delete" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
