@@ -26,6 +26,53 @@ class MainActivity : AppCompatActivity() {
         val buttonDivide = findViewById<Button>(R.id.divide_button)
         val buttonEquals = findViewById<Button>(R.id.equals_button)
 
+        button1.setOnClickListener {
+            addToText("1")
+        }
+        button2.setOnClickListener {
+            addToText("2")
+        }
+        button3.setOnClickListener {
+            addToText("3")
+        }
+        button4.setOnClickListener {
+            addToText("4")
+        }
+        button5.setOnClickListener {
+            addToText("5")
+        }
+        button6.setOnClickListener {
+            addToText("6")
+        }
+        button7.setOnClickListener {
+            addToText("7")
+        }
+        button8.setOnClickListener {
+            addToText("8")
+        }
+        button9.setOnClickListener {
+            addToText("9")
+        }
+        button0.setOnClickListener {
+            addToText("0")
+        }
+        buttonPlus.setOnClickListener {
+            addToText("+")
+        }
+        buttonMinus.setOnClickListener {
+            addToText("-")
+        }
+        buttonDivide.setOnClickListener {
+            addToText("/")
+        }
+        buttonTimes.setOnClickListener {
+            addToText("*")
+        }
+
+    }
+
+    private fun addToText(i: String) {
+
     }
 
 
