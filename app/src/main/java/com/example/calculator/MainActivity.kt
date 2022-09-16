@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
+import java.nio.file.Files.delete
+import java.util.logging.Logger.global
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +28,28 @@ class MainActivity : AppCompatActivity() {
         val buttonBackspace = findViewById<ImageButton>(R.id.delete_button)
         val buttonDivide = findViewById<Button>(R.id.divide_button)
         val buttonEquals = findViewById<Button>(R.id.equals_button)
+        val resultText = findViewById<TextView>(R.id.result_text)
+        var text = ""
+
+        fun displayResult() {
+            TODO("Not yet implemented")
+        }
+
+        fun calculateResult() {
+            TODO("Not yet implemented")
+        }
+
+        fun removeText(i: Int) {
+            //TODO: implement
+        }
+
+        fun addToText(i: String) {
+            if("=" in text ){
+                removeText(text.length)
+            }
+            text+=i
+            resultText.text = text
+        }
 
         button1.setOnClickListener {
             addToText("1")
@@ -68,12 +93,17 @@ class MainActivity : AppCompatActivity() {
         buttonTimes.setOnClickListener {
             addToText("*")
         }
+        buttonBackspace.setOnClickListener{
+            removeText(1)
+        }
+        buttonEquals.setOnClickListener {
+            calculateResult()
+            displayResult()
+        }
 
     }
 
-    private fun addToText(i: String) {
 
-    }
 
 
 }
