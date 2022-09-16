@@ -40,7 +40,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         fun removeText(i: Int) {
-            //TODO: implement
+            text.removeRange(text.length-1-i,text.length-1)
+            resultText.text = text
         }
 
         fun addToText(i: String) {
