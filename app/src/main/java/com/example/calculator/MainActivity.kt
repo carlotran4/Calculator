@@ -40,13 +40,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         fun removeText(i: Int) {
-            text.removeRange(text.length-1-i,text.length-1)
+            text= text.substring(0,text.length-i)
             resultText.text = text
+
         }
 
         fun addToText(i: String) {
             if("=" in text ){
-                removeText(text.length)
+                removeText(text.length-1)
             }
             text+=i
             resultText.text = text
