@@ -31,12 +31,11 @@ class MainActivity : AppCompatActivity() {
         val resultText = findViewById<TextView>(R.id.result_text)
         var text = ""
 
-        fun displayResult() {
-            TODO("Not yet implemented")
-        }
 
-        fun calculateResult() {
-            TODO("Not yet implemented")
+
+        fun calculateResult():String {
+            //TODO implement
+            return "2"
         }
 
         fun removeText(i: Int) {
@@ -46,9 +45,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         fun addToText(i: String) {
-            if("=" in text ){
-                removeText(text.length-1)
-            }
             text+=i
             resultText.text = text
         }
@@ -99,8 +95,8 @@ class MainActivity : AppCompatActivity() {
             removeText(1)
         }
         buttonEquals.setOnClickListener {
-            calculateResult()
-            displayResult()
+            resultText.text = calculateResult()
+            text=""
         }
 
     }
