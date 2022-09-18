@@ -16,4 +16,5 @@
     <string name="minus">-</string>
     <string name="_6">6</string>
     <string name="_5">5</string>
+    <string name="zero_error">Error: div by 0</string>
 </resources>

@@ -34,14 +34,23 @@ class MainActivity : AppCompatActivity() {
 
 
         fun calculateResult():String {
-            //TODO implement
-            return "2"
+            val foo = text.split('+', '*', '-', '/')
+            if(foo[0].isEmpty()||foo[1].isEmpty()||foo.size>2) return "Invalid Input"
+            return when {
+                text.contains('/') -> (foo[0].toFloat() / foo[1].toFloat()).toString()
+                text.contains('*') -> (foo[0].toFloat() * foo[1].toFloat()).toString()
+                text.contains('+') -> (foo[0].toFloat() + foo[1].toFloat()).toString()
+                text.contains('-') -> (foo[0].toFloat() - foo[1].toFloat()).toString()
+                else -> text
+            }
+
         }
 
         fun removeText(i: Int) {
-            text= text.substring(0,text.length-i)
-            resultText.text = text
-
+            if (text.isNotEmpty()) {
+                text = text.substring(0, text.length - i)
+                resultText.text = text
+            }
         }
 
         fun addToText(i: String) {
@@ -95,7 +104,8 @@ class MainActivity : AppCompatActivity() {
             removeText(1)
         }
         buttonEquals.setOnClickListener {
-            resultText.text = calculateResult()
+            if(calculateResult()!="Infinity") resultText.text = calculateResult()
+            else resultText.text = getString(R.string.zero_error)
             text=""
         }
 
