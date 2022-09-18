@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         fun calculateResult():String {
             val foo = text.split('+', '*', '-', '/')
+            if (foo.size==1) return text
             if(foo[0].isEmpty()||foo[1].isEmpty()||foo.size>2) return "Invalid Input"
             return when {
                 text.contains('/') -> (foo[0].toFloat() / foo[1].toFloat()).toString()
